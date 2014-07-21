@@ -11,6 +11,14 @@ install:
   - rvm use 1.9.3
   - gem install bundler
   - bundle install
+cache:
+  bundler: true
+  directories:
+    - $HOME/.m2
+notifications:
+  irc: "chat.freenode.net#apache-ode"
+  email:
+    - dev@ode.apache.org
 env:
   - TEST_PORTS=9999,7171
 script: buildr clean package junit:report test=all JAVADOC=off
