@@ -21,4 +21,4 @@ notifications:
     - dev@ode.apache.org
 env:
   - TEST_PORTS=9999,7171
-script: buildr clean package junit:report test=all JAVADOC=off
+script: buildr clean package JAVADOC=off
