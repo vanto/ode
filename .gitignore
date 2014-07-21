@@ -18,5 +18,6 @@ bin
 target
 reports
 test-output
-_buildr.rb
+/_buildr.rb
 derby.log
+/Gemfile.lock
