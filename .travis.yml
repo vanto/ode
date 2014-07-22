@@ -20,5 +20,5 @@ notifications:
   email:
     - dev@ode.apache.org
 env:
-  - TEST_PORTS=9999,7171
+  - TEST_PORTS=8888,7171
 script: buildr clean package JAVADOC=off
