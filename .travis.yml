@@ -15,10 +15,9 @@ cache:
   bundler: true
   directories:
     - $HOME/.m2
-notifications:
-  irc: "chat.freenode.net#apache-ode"
-  email:
-    - dev@ode.apache.org
+before_script:
+  - mysql -e 'create database ode-hib;'
+  - mysql -e 'create database ode-jpa;'
 env:
   - TEST_PORTS=8888,7171
 script: buildr clean package JAVADOC=off

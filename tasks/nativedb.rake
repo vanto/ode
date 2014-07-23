@@ -15,7 +15,7 @@
 #    limitations under the License.
 #
 
-SETTINGS = "#{File.expand_path('.buildr', ENV['HOME'])}/settings.rb"
+SETTINGS = "ci_db_settings.rb"
 
 module NativeDB
 #
@@ -50,7 +50,7 @@ module NativeDB
           Buildr.ant(name) do |ant|
             create_tables_sql = "#{task.name}/ode_tables.sql"
             drop_tables_sql = "#{task.name}/drop_ode_tables.sql"
-            ant.get :src=>"http://release.intalio.com/m2repo/ci-resources/ode-schema-5.2.x/package/#{dbprops[:db]}/ode_tables.sql",
+            ant.get :src=>dbprops[:schema_url],
                     :dest=> create_tables_sql
             sqls = prepare_sqls(task, ant, [], :hib, dbprops[:db], drop_tables_sql, create_tables_sql)
 
