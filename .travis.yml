@@ -16,8 +16,8 @@ cache:
   directories:
     - $HOME/.m2
 before_script:
-  - mysql -e 'create database ode-hib;'
-  - mysql -e 'create database ode-jpa;'
+  - mysql -e 'create database hib;'
+  - mysql -e 'create database jpa;'
 env:
   - TEST_PORTS=8888,7171
 script: buildr clean package JAVADOC=off

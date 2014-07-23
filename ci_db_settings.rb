@@ -21,7 +21,7 @@ def settings
     :db=>"mysql",
     :schema_url=>"http://ode.apache.org/sql/ode-1.3.4-hib-mysql55.sql",
     :driver=>"com.mysql.jdbc.Driver",
-    :url=>"jdbc:mysql://localhost:3306/bpms?autoReconnect=true",
+    :url=>"jdbc:mysql://localhost:3306/hib?autoReconnect=true",
     :userid=>"root",
     :password=>"",
     :autocommit=>"off",
