@@ -15,7 +15,7 @@
 #    limitations under the License.
 #
 
-SETTINGS = "ci_db_settings.rb"
+SETTINGS = "#{File.expand_path('..')}/ci_db_settings.rb"
 
 module NativeDB
 #
